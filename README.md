@@ -1,4 +1,5 @@
 ![license](https://img.shields.io/github/license/Radonirinaunimi/dotfiles?style=flat-square)
+![repo size](https://img.shields.io/github/repo-size/Radonirinaunimi/dotfiles)
 ### Features
 The following respository contains the `dotfiles` of my personal desktop configuration. It is heavily but not entirely driven by the [Dracula](https://github.com/dracula/dracula-theme) theme. If you are using the dotfiles, please take into that the configurations were mainly designed to optimize my personal workflow. Below is a screenshot of my desktop.
 ![screenshot](screenshot/out.png)
