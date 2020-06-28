@@ -1,0 +1,32 @@
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+set page-padding 1
+
+# Function mapping
+map u scroll half-up
+map d scroll half-down
+map D toggle_page_mode
+map r reload
+map R rotate
+map J zoom out
+map K zoom in
+map i recolor
+map p print
+
+set selection-clipboard clipboard
+
+set recolor true
+# Color background outside PDF
+set default-bg "#282A36"
+# Color PDF
+set recolor-lightcolor "#282A36"
+# Color text
+set recolor-darkcolor "#FFFFFF"
+set adjust-open "page"
+
+# Other parameters
+set tabbar-fg "#282A36"
+set inputbar-fg "#282A36"
+set inputbar-bg "#282A36"
+set statusbar-bg "#282A36"
+set notification-bg "#282A36"

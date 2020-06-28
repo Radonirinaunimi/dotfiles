@@ -1,0 +1,142 @@
+# Terminal env
+env:
+  TERM: xterm-256color
+
+
+# Font configuration (changes require restart)
+font:
+  # Size:
+  size: 8
+  # # The normal (roman) font face to use.
+  # normal:
+  #   family: Droid Sans Mono Slashed for Powerline
+  #   family: Droid Sans Mono Slashed for Powerline
+  #   # Style can be specified to pick a specific face.
+  #   style: Regular
+
+  # # The bold font face
+  # bold:
+  #   family: Droid Sans Mono Slashed for Powerline
+  #   # Style can be specified to pick a specific face.
+  #   # style: Bold
+
+  #   # The italic font face
+  # italic:
+  #   family: Droid Sans Mono Slashed for Powerline
+  #   # Style can be specified to pick a specific face.
+  #   # style: Italic
+
+# background_opacity: 0.9
+# background_blur: true
+
+# Define different color schemes
+schemes:
+  # (Pencil Dark)
+  Pencil_Dark: &pdark
+    # Default Colors
+    primary:
+      background: '0x212121'
+    foreground: '0xf1f1f1'
+    # Normal colors
+    normal:
+      black:   '0x212121'
+      red:     '0xc30771'
+      green:   '0x10a778'
+      yellow:  '0xa89c14'
+      blue:    '0x008ec4'
+      magenta: '0x523c79'
+      cyan:    '0x20a5ba'
+      white:   '0xe0e0e0'
+      # Bright colors
+    bright:
+      black:   '0x212121'
+      red:     '0xfb007a'
+      green:   '0x5fd7af'
+      yellow:  '0xf3e430'
+      blue:    '0x20bbfc'
+      magenta: '0x6855de'
+      cyan:    '0x4fb8cc'
+      white:   '0xf1f1f1'
+  
+  
+  # (Dracula)
+  purple_dracula: &dracula
+    # Default colors
+    primary:
+      background: '0x282a36'
+      foreground: '0xf8f8f2'
+  
+    # Cursor colors
+    cursor:
+      text: '0x44475a'
+      cursor: '0xf8f8f2'
+  
+    # Normal colors
+    normal:
+      black:   '0x000000'
+      red:     '0xff5555'
+      green:   '0x50fa7b'
+      yellow:  '0xf1fa8c'
+      blue:    '0xbd93f9'
+      magenta: '0xff79c6'
+      cyan:    '0x8be9fd'
+      white:   '0xbfbfbf'
+  
+    # Bright colors
+    bright:
+      black:   '0x4d4d4d'
+      red:     '0xff6e67'
+      green:   '0x5af78e'
+      yellow:  '0xf4f99d'
+      blue:    '0xcaa9fa'
+      magenta: '0xff92d0'
+      cyan:    '0x9aedfe'
+      white:   '0xe6e6e6'
+  
+    dim:
+      black:   '0x14151b'
+      red:     '0xff2222'
+      green:   '0x1ef956'
+      yellow:  '0xebf85b'
+      blue:    '0x4d5b86'
+      magenta: '0xff46b0'
+      cyan:    '0x59dffc'
+      white:   '0xe6e6d1'
+  
+    indexed_colors: []
+
+  # (Gruvbox dark)
+  gruvbox_dark: &gruvbox
+    # Default colors
+    primary:
+      # hard contrast: background = '#1d2021'
+      background: '#282828'
+      # soft contrast: background = '#32302f'
+      foreground: '#ebdbb2'
+      # background_opacity: 0.0
+  
+    # Normal colors
+    normal:
+      black:   '#282828'
+      red:     '#cc241d'
+      green:   '#98971a'
+      yellow:  '#d79921'
+      blue:    '#458588'
+      magenta: '#b16286'
+      cyan:    '#689d6a'
+      white:   '#a89984'
+  
+    # Bright colors
+    bright:
+      black:   '#928374'
+      red:     '#fb4934'
+      green:   '#b8bb26'
+      yellow:  '#fabd2f'
+      blue:    '#83a598'
+      magenta: '#d3869b'
+      cyan:    '#8ec07c'
+      white:   '#ebdbb2'
+
+
+# Choose color scheme
+colors: *dracula
