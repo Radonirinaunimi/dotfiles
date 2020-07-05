@@ -1,1 +1,1 @@
-/home/tanjona/.local/share/omf/themes/agnoster/fish_prompt.fish
+/home/tanjona/.local/share/omf/themes/budspencer/fish_prompt.fish

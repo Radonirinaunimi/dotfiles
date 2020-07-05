@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/Radonirinaunimi/dotfiles"><img alt="dotfiles" src="screenshot/logo.png" width=175></a> 
+  <a href="https://github.com/Radonirinaunimi/dotfiles"><img alt="dotfiles" src="screenshot/logo.png" width=215></a> 
 </p>
 <p align="center">
   <a href="https://github.com/Radonirinaunimi/dotfiles/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/Radonirinaunimi/dotfiles?label=license&logo=Github&style=flat-square"></a>
