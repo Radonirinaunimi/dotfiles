@@ -12,16 +12,16 @@ The following respository contains the `dotfiles` of my personal desktop configu
 
 ### Configurations
 As a window manager, I use [i3](https://i3wm.org/). The main apps, where the configuration files are inlcuded in this repository, are the following:
-| Type        | Aplication                            | Link                                             |
-|-------------|---------------------------------------|--------------------------------------------------|
-| WM          | **i3**                                | [here](https://i3wm.org/)                        |
-| Bar         | **Polybar**                           | [here](https://github.com/polybar/polybar)       |
-| Terminal    | **Alacritty** (with GPU Acceleration) | [here](https://github.com/alacritty/alacritty)   |
-| Shell       | **Fish** + **Oh my Fish**             | [here](https://github.com/oh-my-fish/oh-my-fish) |
-| ColorScheme | **Dracula**                           | [here](https://github.com/dracula/dracula-theme) |
-| Editor      | **Vim**                               | [here](https://github.com/vim/vim)               |
-| Browser     | **Surf** (from Suckless)              | [here](https://surf.suckless.org/)               |
-| PDFreader   | **zathura**                           | [here](https://pwmt.org/projects/zathura/)       |
+| Type        | Aplication                            |Overview                                                                                                        | Features                               |
+|-------------|---------------------------------------|--------------------------------------------------------------------------------------------------------------- |----------------------------------------|
+| WM          | **i3**                                |                                                                                                                | [here]                                 |
+| Bar         | **Polybar**                           |                                                                                                                | [here]                                 |
+| Terminal    | **Alacritty** (with GPU Acceleration) |                                                                                                                | [here]                                 |
+| Shell       | **Fish** + **Oh my Fish**             |<img src="https://github.com/Radonirinaunimi/dotfiles/blob/master/screenshot/fish_prompt.png" width="200">      | <ul><li>item1</li><li>item2</li></ul>  |
+| ColorScheme | **Dracula**                           |                                                                                                                | [here]                                 |
+| Editor      | **Vim**                               |                                                                                                                | [here]                                 |
+| Browser     | **Surf** (from Suckless)              |                                                                                                                | [here]                                 |
+| PDFreader   | **zathura**                           |                                                                                                                | [here]                                 |
 
 ### Side Notes
 * In order to install all the `vim` plugins, after copying the `.vimrc` in the home directory, first run the folowing in the terminal
