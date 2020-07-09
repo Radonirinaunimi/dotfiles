@@ -12,16 +12,17 @@ The following respository contains the `dotfiles` of my personal desktop configu
 
 ### Configurations
 As a window manager, I use [i3](https://i3wm.org/). The main apps, where the configuration files are inlcuded in this repository, are the following:
-| Type        | Aplication                            |Overview                                                                                                        | Features                               |
-|-------------|---------------------------------------|--------------------------------------------------------------------------------------------------------------- |----------------------------------------|
-| WM          | **i3**                                |                                                                                                                | [here]                                 |
-| Bar         | **Polybar**                           |                                                                                                                | [here]                                 |
-| Terminal    | **Alacritty** (with GPU Acceleration) |                                                                                                                | [here]                                 |
-| Shell       | **Fish** + **Oh my Fish**             |<img src="https://github.com/Radonirinaunimi/dotfiles/blob/master/screenshot/fish_prompt.png" width="200">      | <ul><li>item1</li><li>item2</li></ul>  |
-| ColorScheme | **Dracula**                           |                                                                                                                | [here]                                 |
-| Editor      | **Vim**                               |                                                                                                                | [here]                                 |
-| Browser     | **Surf** (from Suckless)              |                                                                                                                | [here]                                 |
-| PDFreader   | **zathura**                           |                                                                                                                | [here]                                 |
+| Type        | Aplication                 |Overview                                                                                                        | Features                                                               |
+|-------------|----------------------------|--------------------------------------------------------------------------------------------------------------- |------------------------------------------------------------------------|
+| WM          | **i3**                     |                                                                                                                | [here]                                                                 |
+| Bar         | **Polybar**                |                                                                                                                | [here]                                                                 |
+| Terminal    | **Alacritty**              |                                                                                                                | [here]                                                                 |
+| Shell       | **Fish** + **Oh my Fish**  |<img src="https://github.com/Radonirinaunimi/dotfiles/blob/refactor/screenshot/fish_prompt.png" width="200">    | <ul><li>Powerline</li><li>Git status</li><li>Execution time</li></ul>  |
+| ColorScheme | **Dracula**                |                                                                                                                | [here]                                                                 |
+| Editor      | **Vim**                    |                                                                                                                | [here]                                                                 |
+| Multiplexer | **Tmux**                   |<img src="https://github.com/Radonirinaunimi/dotfiles/blob/refactor/screenshot/tmux.png" width="200">           | <ul><li>Dracula Themed</li><li>Powerline & Git</li></ul>               |
+| Browser     | **Surf** (from Suckless)   |                                                                                                                | [here]                                                                 |
+| PDFreader   | **zathura**                |                                                                                                                | [here]                                                                 |
 
 ### Side Notes
 * In order to install all the `vim` plugins, after copying the `.vimrc` in the home directory, first run the folowing in the terminal
