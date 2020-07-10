@@ -35,8 +35,11 @@ bindsym Ctrl+Return exec gnome-screenshot -i
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# start program launcher using dmenu
+bindsym $mod+i exec --no-startup-id dmenu_recency
+
 # start program launcher
-bindsym $mod+space exec --no-startup-id dmenu_recency
+bindsym $mod+space exec --no-startup-id rofi -show run
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu

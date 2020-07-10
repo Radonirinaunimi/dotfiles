@@ -6,30 +6,44 @@
   <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Radonirinaunimi/dotfiles?label=repo%20size&logo=Github&style=flat-square">
 </p>
 
+It goes without saying that if one stares at a screen for several hours a day, the experience must be as painless as possible. Such an aim would entail a workflow that seeks to maximize the productivity with a color scheme that is pleasant to look at. This repository contains some dotfiles that, while not succeding yet, aims to achieve that goal.
+
 ### Features
-The following respository contains the `dotfiles` of my personal desktop configuration. It is heavily but not entirely influenced by the [Dracula](https://github.com/dracula/dracula-theme) color scheme. If you are using the dotfiles, please take into that the configurations were mainly designed to optimize my personal workflow. Below is a screenshot of my desktop.
+
+The following configurations have been heavily but not entirely influenced by the [dracula](https://draculatheme.com/) theme. For the time being, the window manger in which most of the features described below is [i3](https://i3wm.org/). Below are the details of such configurations.
 ![screenshot](screenshot/out.png)
 
 ### Configurations
 As a window manager, I use [i3](https://i3wm.org/). The main apps, where the configuration files are inlcuded in this repository, are the following:
-| Type        | Aplication                            | Link                                             |
-|-------------|---------------------------------------|--------------------------------------------------|
-| WM          | **i3**                                | [here](https://i3wm.org/)                        |
-| Bar         | **Polybar**                           | [here](https://github.com/polybar/polybar)       |
-| Terminal    | **Alacritty** (with GPU Acceleration) | [here](https://github.com/alacritty/alacritty)   |
-| Shell       | **Fish** + **Oh my Fish**             | [here](https://github.com/oh-my-fish/oh-my-fish) |
-| ColorScheme | **Dracula**                           | [here](https://github.com/dracula/dracula-theme) |
-| Editor      | **Vim**                               | [here](https://github.com/vim/vim)               |
-| Browser     | **Surf** (from Suckless)              | [here](https://surf.suckless.org/)               |
-| PDFreader   | **zathura**                           | [here](https://pwmt.org/projects/zathura/)       |
+| Type        | Aplication                 |Overview                                                                                                        | Features                                                               |
+|-------------|----------------------------|--------------------------------------------------------------------------------------------------------------- |------------------------------------------------------------------------|
+| WM          | **i3**                     |<img src="https://github.com/Radonirinaunimi/dotfiles/blob/refactor/screenshot/autotilling.png" width="200">    | <ul><li>Autotilling</li></ul>                                          |
+| Bar         | **Polybar**                |                                                                                                                | <ul><li>Minimal</li><li>Clickable widgets</li></ul>                    |
+| Terminal    | **Alacritty**              |                                                                                                                | <ul><li>GPU acceleration</li></ul>                                     |
+| Shell       | **Fish** + **Oh my Fish**  |<img src="https://github.com/Radonirinaunimi/dotfiles/blob/refactor/screenshot/fish_prompt.png" width="200">    | <ul><li>Powerline</li><li>Git status</li><li>Execution time</li></ul>  |
+| App Launcher| **rofi**                   |<img src="https://github.com/Radonirinaunimi/dotfiles/blob/refactor/screenshot/rofi.png" width="200">           | <ul><li>Dracula color scheme</li></ul>                                 |
+| Editor      | **Vim**                    |<img src="https://github.com/Radonirinaunimi/dotfiles/blob/refactor/screenshot/vim.png" width="200">            | <ul><li>Powerline status</li></ul>                                     |
+| Multiplexer | **Tmux**                   |<img src="https://github.com/Radonirinaunimi/dotfiles/blob/refactor/screenshot/tmux.png" width="200">           | <ul><li>Dracula Themed</li><li>Powerline & Git</li></ul>               |
+| Browser     | **Surf/Firefox**           |<img src="https://github.com/Radonirinaunimi/dotfiles/blob/refactor/screenshot/firefox.png" width="200">        | <ul><li>Dracula Themed</li></ul>                                       |
+| PDFreader   | **zathura**                |<img src="https://github.com/Radonirinaunimi/dotfiles/blob/refactor/screenshot/zathura.png" width="200">        | <ul><li>Dracula Themed</li></ul>                                       |
 
 ### Side Notes
-* In order to install all the `vim` plugins, after copying the `.vimrc` in the home directory, first run the folowing in the terminal
+
+##### Vim
+In order to install all the `vim` plugins, first, copy the `.vimrc` in the home directory, run the folowing in the terminal
 ```bash
 `vim`
 ```
-and then the plugins can be updated inside vim as
+and then the plugins can be updated inside `vim` as
 ```bash
 :VimBootstrapUpdate
 :PlugInstall
 ```
+
+##### Tmux
+
+To configure `tmux` based on the following [plugin](https://github.com/tmux-plugins/tpm), the [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) must be installed first. To install the plugins, just copy the `.tmux.conf` into the home directory and run the following
+```bash
+tmux source ~/.tmux.conf
+```
+then, inside a `tmux` session, press <kbd>Ctr</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>.
