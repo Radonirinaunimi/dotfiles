@@ -26,8 +26,8 @@ font:
   #   # Style can be specified to pick a specific face.
   #   # style: Italic
 
-# background_opacity: 0.9
-# background_blur: true
+background_opacity: 1
+background_blur: true
 
 # Define different color schemes
 schemes:
@@ -63,7 +63,7 @@ schemes:
   purple_dracula: &dracula
     # Default colors
     primary:
-      background: '0x282a36'
+      background: '0x081b2a'
       foreground: '0xf8f8f2'
   
     # Cursor colors
