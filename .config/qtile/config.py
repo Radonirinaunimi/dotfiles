@@ -153,6 +153,19 @@ keys = [
              lazy.spawn(myTerm+" -e sh ./.config/vifm/scripts/vifmrun"),
              desc='vifm'
              ),
+         # Volume
+         Key([],
+             "XF86AudioRaiseVolume",
+             lazy.spawn("amixer -q -D pulse set Master 2%+")
+             ),
+         Key([],
+             "XF86AudioLowerVolume",
+             lazy.spawn("amixer -q -D pulse set Master 2%-")
+             ),
+         Key([],
+             "XF86AudioMute",
+             lazy.spawn("amixer -q -D pulse set Master toggle")
+             ),
 ]
 
 group_names = [("BROWSER"    , {'layout': 'bsp'}),
@@ -207,9 +220,6 @@ layouts = [
     layout.Floating(**layout_theme)
 ]
 
-xcolor = "#282C34"
-zcolor = "#191919"
-
 colors = ["#292d3e", # panel background
           "#434758", # background for current screen tab
           "#ffffff", # font color for group names
@@ -238,12 +248,12 @@ def init_widgets_list():
                        linewidth = 0,
                        padding = 6,
                        foreground = colors[2],
-                       background = colors[0]
+                       background = colors[7]
                        ),
               widget.Image(
                        filename = "~/.config/qtile/icons/arch.png",
                        margin = 2,
-                       background = colors[0],
+                       background = colors[7],
                        mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn('dmenu_run')}
                        ),
               widget.GroupBox(
@@ -261,10 +271,10 @@ def init_widgets_list():
                        highlight_method = "line",
                        this_current_screen_border = colors[3],
                        this_screen_border = colors [4],
-                       other_current_screen_border = colors[0],
-                       other_screen_border = colors[0],
+                       other_current_screen_border = colors[7],
+                       other_screen_border = colors[7],
                        foreground = colors[2],
-                       background = colors[0]
+                       background = colors[7]
                        ),
               widget.Prompt(
                        prompt = prompt,
@@ -277,16 +287,21 @@ def init_widgets_list():
                        linewidth = 0,
                        padding = 40,
                        foreground = colors[2],
-                       background = colors[0]
+                       background = colors[7]
                        ),
               widget.WindowName(
                        foreground = colors[6],
-                       background = colors[0],
+                       background = colors[7],
                        padding = 0
+                       ),
+              widget.Systray(
+                       foreground = colors[7],
+                       background = colors[7],
+                       padding = 5
                        ),
               widget.TextBox(
                        text = '',
-                       background = colors[0],
+                       background = colors[7],
                        foreground = colors[8],
                        padding = 0,
                        fontsize = 37
@@ -339,7 +354,7 @@ def init_widgets_list():
                        fontsize = 37
                        ),
               widget.TextBox(
-                       text = " 🖬",
+                       text = " ",
                        foreground = colors[2],
                        background = colors[8],
                        padding = 0,
@@ -358,26 +373,34 @@ def init_widgets_list():
                        padding = 0,
                        fontsize = 37
                        ),
-              widget.NetGraph(
-                       interface = "enp37s0",
-                       # format = '{down} ↓↑ {up}',
+              widget.Battery(
+                       charge_char = '',
+                       discharge_char = '',
+                       full_char = '',
                        foreground = colors[2],
                        background = colors[7],
                        padding = 5,
-                       type = 'line',
-                       line_width = 2,
-                       border_width = 1,
-                       bandwidth_type = 'down'
                        ),
+              # widget.NetGraph(
+              #          interface = "enp37s0",
+              #          # format = '{down} ↓↑ {up}',
+              #          foreground = colors[2],
+              #          background = colors[7],
+              #          padding = 5,
+              #          type = 'line',
+              #          line_width = 2,
+              #          border_width = 1,
+              #          bandwidth_type = 'down'
+              #          ),
               widget.TextBox(
-                       text = '',
+                       text = ' ',
                        background = colors[7],
                        foreground = colors[8],
                        padding = 0,
                        fontsize = 37
                        ),
               widget.TextBox(
-                      text = " Vol:",
+                      text = "",
                        foreground = colors[2],
                        background = colors[8],
                        padding = 0
@@ -385,6 +408,7 @@ def init_widgets_list():
               widget.Volume(
                        foreground = colors[2],
                        background = colors[8],
+                       get_volume_command= 'amixer -D pulse get Master'.split(), 
                        padding = 5
                        ),
               widget.TextBox(
@@ -417,16 +441,6 @@ def init_widgets_list():
                        foreground = colors[2],
                        background = colors[9],
                        format = "%A, %B %d  [ %H:%M ]"
-                       ),
-              widget.Sep(
-                       linewidth = 0,
-                       padding = 10,
-                       foreground = colors[0],
-                       background = colors[9]
-                       ),
-              widget.Systray(
-                       background = colors[0],
-                       padding = 5
                        ),
               ]
     return widgets_list
