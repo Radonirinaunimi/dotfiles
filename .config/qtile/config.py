@@ -445,7 +445,7 @@ def init_widgets_list():
               widget.Clock(
                        foreground = colors[2],
                        background = colors[9],
-                       format = "%A, %B %d  [ %H:%M ]"
+                       format = " %A, %B %d  %H:%M"
                        ),
               ]
     return widgets_list
