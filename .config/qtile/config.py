@@ -166,6 +166,11 @@ keys = [
              "XF86AudioMute",
              lazy.spawn("amixer -q -D pulse set Master toggle")
              ),
+         # Screenshots
+         Key(["mod1", "control"], "s",
+             lazy.spawn("gnome-screenshot -i"),
+             desc='Take screenshots'
+             ),
 ]
 
 group_names = [("BROWSER"    , {'layout': 'bsp'}),
