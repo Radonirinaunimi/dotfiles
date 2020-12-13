@@ -1,0 +1,44 @@
+# Main Colors
+unrecognized_file: '#fe8019'
+recognized_file:   '#fe8019'
+dir:               '#076678'
+
+# Link
+dead_link: red
+link:      cyan
+
+# special files
+socket:    '#fb4934'
+blockdev:  '#fb4934'
+chardev:   '#fb4934'
+
+# Access Modes
+write:     darkkhaki
+read:      limegreen
+exec:      red
+no_access: indianred
+
+# Age
+day_old:     mediumspringgreen
+hour_old:    lime
+no_modifier: seagreen
+
+# File Size
+file_large:  orange
+file_medium: gold
+file_small:  peachpuff
+
+# Random
+report: white
+user:   moccasin
+tree:   cyan
+empty:  yellow
+error:  red
+normal: darkkhaki
+
+# Git
+addition:     chartreuse
+modification: darkkhaki
+deletion:     darkred
+untracked:    darkorange
+unchanged:    forestgreen

@@ -1,0 +1,22 @@
+ 
+New instance of bashtop version: 0.8.15 Pid: 5164
+ 
+New instance of bashtop version: 0.9.25 Pid: 48322
+/home/tanjona/anaconda3/lib/python3.7/site-packages/psutil/_pslinux.py:1227: RuntimeWarning: ignoring FileNotFoundError(2, 'No such file or directory') for file '/sys/class/hwmon/hwmon1/temp1_input'
+  RuntimeWarning)
+/home/tanjona/anaconda3/lib/python3.7/site-packages/psutil/_pslinux.py:1227: RuntimeWarning: ignoring FileNotFoundError(2, 'No such file or directory') for file '/sys/class/hwmon/hwmon1/temp2_input'
+  RuntimeWarning)
+/home/tanjona/anaconda3/lib/python3.7/site-packages/psutil/_pslinux.py:1227: RuntimeWarning: ignoring FileNotFoundError(2, 'No such file or directory') for file '/sys/class/hwmon/hwmon3/temp1_input'
+  RuntimeWarning)
+/home/tanjona/anaconda3/lib/python3.7/site-packages/psutil/_pslinux.py:1227: RuntimeWarning: ignoring FileNotFoundError(2, 'No such file or directory') for file '/sys/class/hwmon/hwmon3/temp2_input'
+  RuntimeWarning)
+ 
+New instance of bashtop version: 0.9.25 Pid: 28521
+/home/tanjona/anaconda3/lib/python3.7/site-packages/psutil/_pslinux.py:1227: RuntimeWarning: ignoring FileNotFoundError(2, 'No such file or directory') for file '/sys/class/hwmon/hwmon1/temp1_input'
+  RuntimeWarning)
+/home/tanjona/anaconda3/lib/python3.7/site-packages/psutil/_pslinux.py:1227: RuntimeWarning: ignoring FileNotFoundError(2, 'No such file or directory') for file '/sys/class/hwmon/hwmon1/temp2_input'
+  RuntimeWarning)
+/home/tanjona/anaconda3/lib/python3.7/site-packages/psutil/_pslinux.py:1227: RuntimeWarning: ignoring FileNotFoundError(2, 'No such file or directory') for file '/sys/class/hwmon/hwmon3/temp1_input'
+  RuntimeWarning)
+/home/tanjona/anaconda3/lib/python3.7/site-packages/psutil/_pslinux.py:1227: RuntimeWarning: ignoring FileNotFoundError(2, 'No such file or directory') for file '/sys/class/hwmon/hwmon3/temp2_input'
+  RuntimeWarning)
