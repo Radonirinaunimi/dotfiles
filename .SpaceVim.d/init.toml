@@ -53,10 +53,15 @@
 [[layers]]
   name = "colorscheme"
 
-# Dracula Color Scheme
+# Color Schemes
 [[custom_plugins]]
   repo = "dracula/vim"
   name = "dracula"
+  merged = false
+
+[[custom_plugins]]
+  repo = "sainnhe/sonokai"
+  name = "sonokai"
   merged = false
 
 [[custom_plugins]]

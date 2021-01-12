@@ -2,13 +2,21 @@
 env:
   TERM: xterm-256color
 
+# Window Conifguration
+window:
+  position:
+    x: 0
+    y: 0
+  padding:
+    x: 18
+    y: 18
 
 # Font configuration (changes require restart)
 font:
   # Normal font face
   normal:
     family: Hack Nerd Font
-    style: Regular
+    style: Bold
   # Bold font face
   bold:
     family: Hack Nerd Font
@@ -24,96 +32,84 @@ font:
   # Size:
   size: 8
 
-# background_opacity: 0.9
+# background_opacity: 1
 # background_blur: true
 
 # Define different color schemes
 schemes:
-  # (Pencil Dark)
+  #####################
+  # Pencil Dark       #
+  #####################
   Pencil_Dark: &pdark
-    # Default Colors
     primary:
-      background: '0x212121'
-    foreground: '0xf1f1f1'
-    # Normal colors
+      background: '#212121'
+      foreground: '#f1f1f1'
     normal:
-      black:   '0x212121'
-      red:     '0xc30771'
-      green:   '0x10a778'
-      yellow:  '0xa89c14'
-      blue:    '0x008ec4'
-      magenta: '0x523c79'
-      cyan:    '0x20a5ba'
-      white:   '0xe0e0e0'
-      # Bright colors
+      black:   '#212121'
+      red:     '#c30771'
+      green:   '#10a778'
+      yellow:  '#a89c14'
+      blue:    '#008ec4'
+      magenta: '#523c79'
+      cyan:    '#20a5ba'
+      white:   '#e0e0e0'
     bright:
-      black:   '0x212121'
-      red:     '0xfb007a'
-      green:   '0x5fd7af'
-      yellow:  '0xf3e430'
-      blue:    '0x20bbfc'
-      magenta: '0x6855de'
-      cyan:    '0x4fb8cc'
-      white:   '0xf1f1f1'
+      black:   '#212121'
+      red:     '#fb007a'
+      green:   '#5fd7af'
+      yellow:  '#f3e430'
+      blue:    '#20bbfc'
+      magenta: '#6855de'
+      cyan:    '#4fb8cc'
+      white:   '#f1f1f1'
   
-  
-  # (Dracula)
+  #####################
+  # Dracula           #
+  #####################
   purple_dracula: &dracula
-    # Default colors
     primary:
-      background: '0x282a36'
-      foreground: '0xf8f8f2'
-  
-    # Cursor colors
+      background: '#282a36'
+      foreground: '#f8f8f2'
     cursor:
-      text: '0x44475a'
-      cursor: '0xf8f8f2'
-  
-    # Normal colors
+      text:   '#44475a'
+      cursor: '#f8f8f2'
     normal:
-      black:   '0x000000'
-      red:     '0xff5555'
-      green:   '0x50fa7b'
-      yellow:  '0xf1fa8c'
-      blue:    '0xbd93f9'
-      magenta: '0xff79c6'
-      cyan:    '0x8be9fd'
-      white:   '0xbfbfbf'
-  
-    # Bright colors
+      black:   '#000000'
+      red:     '#ff5555'
+      green:   '#50fa7b'
+      yellow:  '#f1fa8c'
+      blue:    '#bd93f9'
+      magenta: '#ff79c6'
+      cyan:    '#8be9fd'
+      white:   '#bfbfbf'
     bright:
-      black:   '0x4d4d4d'
-      red:     '0xff6e67'
-      green:   '0x5af78e'
-      yellow:  '0xf4f99d'
-      blue:    '0xcaa9fa'
-      magenta: '0xff92d0'
-      cyan:    '0x9aedfe'
-      white:   '0xe6e6e6'
-  
+      black:   '#4d4d4d'
+      red:     '#ff6e67'
+      green:   '#5af78e'
+      yellow:  '#f4f99d'
+      blue:    '#caa9fa'
+      magenta: '#ff92d0'
+      cyan:    '#9aedfe'
+      white:   '#e6e6e6'
     dim:
-      black:   '0x14151b'
-      red:     '0xff2222'
-      green:   '0x1ef956'
-      yellow:  '0xebf85b'
-      blue:    '0x4d5b86'
-      magenta: '0xff46b0'
-      cyan:    '0x59dffc'
-      white:   '0xe6e6d1'
+      black:   '#14151b'
+      red:     '#ff2222'
+      green:   '#1ef956'
+      yellow:  '#ebf85b'
+      blue:    '#4d5b86'
+      magenta: '#ff46b0'
+      cyan:    '#59dffc'
+      white:   '#e6e6d1'
   
     indexed_colors: []
 
-  # (Gruvbox dark)
+  #####################
+  # Gruvbox dark      #
+  #####################
   gruvbox_dark: &gruvbox
-    # Default colors
     primary:
-      # hard contrast: background = '#1d2021'
       background: '#282828'
-      # soft contrast: background = '#32302f'
       foreground: '#ebdbb2'
-      # background_opacity: 0.0
-  
-    # Normal colors
     normal:
       black:   '#282828'
       red:     '#cc241d'
@@ -123,8 +119,6 @@ schemes:
       magenta: '#b16286'
       cyan:    '#689d6a'
       white:   '#a89984'
-  
-    # Bright colors
     bright:
       black:   '#928374'
       red:     '#fb4934'
@@ -135,6 +129,211 @@ schemes:
       cyan:    '#8ec07c'
       white:   '#ebdbb2'
 
+  #####################
+  # Sonokai           #
+  #####################
+  monokai: &sonokai
+    primary:
+      background: '#2d2a2e'
+      foreground: '#e3e1e4'
+    normal:
+      black:    '#1a181a'
+      red:      '#f85e84'
+      green:    '#9ecd6f'
+      yellow:   '#e5c463'
+      blue:     '#7accd7'
+      magenta:  '#ab9df2'
+      cyan:     '#ef9062'
+      white:    '#e3e1e4'
+    bright:
+      black:    '#1a181a'
+      red:      '#f85e84'
+      green:    '#9ecd6f'
+      yellow:   '#e5c463'
+      blue:     '#7accd7'
+      magenta:  '#ab9df2'
+      cyan:     '#ef9062'
+      white:    '#e3e1e4'
+
+  #####################
+  # Xonokai           #
+  #####################
+  xonokai: &xonokai
+    primary:
+      background: '#2c2e34'
+      foreground: '#e2e2e3'
+    normal:
+      black:    '#505050'
+      red:      '#fc5d7c'
+      green:    '#9ed072'
+      yellow:   '#e7c664'
+      blue:     '#76cce0'
+      magenta:  '#b39df3'
+      cyan:     '#f39660'
+      white:    '#e2e2e3'
+    bright:
+      black:    '#505050'
+      red:      '#fc5d7c'
+      green:    '#9ed072'
+      yellow:   '#e7c664'
+      blue:     '#76cce0'
+      magenta:  '#b39df3'
+      cyan:     '#f39660'
+      white:    '#e2e2e3'
+
+  #####################
+  # SeaShells         #
+  #####################
+  SeaShells: &seashells
+    bright:
+      black:    '#434b53'
+      blue:     '#1bbcdd'
+      cyan:     '#87acb4'
+      green:    '#628d98'
+      magenta:  '#bbe3ee'
+      red:      '#d48678'
+      white:    '#fee4ce'
+      yellow:   '#fdd39f'
+    cursor:
+      cursor:   '#fca02f'
+      text:     '#08131a'
+    normal:
+      black:    '#17384c'
+      blue:     '#1e4950'
+      cyan:     '#50a3b5'
+      green:    '#027c9b'
+      magenta:  '#68d4f1'
+      red:      '#d15123'
+      white:    '#deb88d'
+      yellow:   '#fca02f'
+    primary:
+      background: '#09141b'
+      foreground: '#deb88d'
+    selection:
+      background: '#1e4962'
+      text:       '#fee4ce'
+
+  #####################
+  # FireWatch         #
+  #####################
+  FireWatch: &firewatch
+    bright:
+      black:    '#585f6d'
+      blue:     '#4c89c5'
+      cyan:     '#44a8b6'
+      green:    '#5ab977'
+      magenta:  '#d55119'
+      red:      '#d95360'
+      white:    '#e6e5ff'
+      yellow:   '#dfb563'
+    cursor:
+      cursor:   '#f6f7ec'
+      text:     '#c4c5b5'
+    normal:
+      black:    '#585f6d'
+      blue:     '#4d89c4'
+      cyan:     '#44a8b6'
+      green:    '#5ab977'
+      magenta:  '#d55119'
+      red:      '#d95360'
+      white:    '#e6e5ff'
+      yellow:   '#dfb563'
+    primary:
+      background: '#1e2027'
+      foreground: '#9ba2b2'
+    selection:
+      background: '#2f363e'
+      text:       '#7d8fa4'
+
+  #####################
+  # Brogrammer        #
+  #####################
+  BroGrammer: &brogrammer
+    bright:
+      black:    '#d6dbe5'
+      blue:     '#1081d6'
+      cyan:     '#0f7ddb'
+      green:    '#1dd361'
+      magenta:  '#5350b9'
+      red:      '#de352e'
+      white:    '#ffffff'
+      yellow:   '#f3bd09'
+    cursor:
+      cursor:   '#b9b9b9'
+      text:     '#101010'
+    normal:
+      black:    '#1f1f1f'
+      blue:     '#2a84d2'
+      cyan:     '#1081d6'
+      green:    '#2dc55e'
+      magenta:  '#4e5ab7'
+      red:      '#f81118'
+      white:    '#d6dbe5'
+      yellow:   '#ecba0f'
+    primary:
+      background: '#131313'
+      foreground: '#d6dbe5'
+    selection:
+      background: '#1f1f1f'
+      text:       '#d6dbe5'
+
+  #####################
+  # Solarized Dark    #
+  #####################
+  SolarizedDark: &solarizeddark
+    bright:
+      black:    '#475b62'
+      blue:     '#708284'
+      cyan:     '#819090'
+      green:    '#475b62'
+      magenta:  '#5956ba'
+      red:      '#bd3613'
+      white:    '#fcf4dc'
+      yellow:   '#536870'
+    cursor:
+      cursor:   '#708284'
+      text:     '#002831'
+    normal:
+      black:    '#002831'
+      blue:     '#2176c7'
+      cyan:     '#259286'
+      green:    '#738a05'
+      magenta:  '#c61c6f'
+      red:      '#d11c24'
+      white:    '#eae3cb'
+      yellow:   '#a57706'
+    primary:
+      background: '#001e27'
+      foreground: '#708284'
+    selection:
+      background: '#002831'
+      text:       '#819090'
+
+  #####################
+  # SpaceDUck         #
+  #####################
+  SpaceDuck: &spaceduck
+    primary:
+      background: '#0f111b'
+      foreground: '#ecf0c1'
+    normal:
+      black:   '#000000'
+      red:     '#e33400'
+      green:   '#5ccc96'
+      yellow:  '#b3a1e6'
+      blue:    '#00a3cc'
+      magenta: '#f2ce00'
+      cyan:    '#7a5ccc'
+      white:   '#686f9a'
+    bright:
+      black:   '#686f9a'
+      red:     '#e33400'
+      green:   '#5ccc96'
+      yellow:  '#b3a1e6'
+      blue:    '#00a3cc'
+      magenta: '#f2ce00'
+      cyan:    '#7a5ccc'
+      white:   '#f0f1ce'
 
 # Choose color scheme
 colors: *dracula
