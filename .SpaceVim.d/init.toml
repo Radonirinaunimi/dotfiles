@@ -11,15 +11,15 @@
   # set spacevim theme. by default colorscheme layer is not loaded,
   # if you want to use more colorscheme, please load the colorscheme
   # layer
-  colorscheme = "zellner"
-  colorscheme_bg = "light"
+  colorscheme = "default"
+  colorscheme_bg = "dark"
   # Disable guicolors in basic mode, many terminal do not support 24bit
   # true colors
   enable_guicolors = false
   # Disable statusline separator, if you want to use other value, please
   # install nerd fonts
-  statusline_separator = "fire"
-  statusline_iseparator = "fire"
+  statusline_separator = "nil"
+  statusline_iseparator = "nil"
   buffer_index_type = 4
   windows_index_type = 3
   enable_tabline_filetype_icon = false
@@ -32,10 +32,37 @@
   filetree_direction = "left"
   # Autocompletion
   autocomplete_method = "coc"
+  # Lint
+  enable_ale = false
+  enable_neomake = false
+  lint_on_the_fly = false
+  # status_line color
+  custom_color_palette = [
+        ["#282828", "#a89984", 246, 235],
+        ["#a89984", "#504945", 239, 246],
+        ["#a89984", "#3c3836", 237, 246],
+        ["#665c54", 241],
+        ["#282828", "#83a598", 235, 109],
+        ["#282828", "#fe8019", 235, 208],
+        ["#282828", "#8ec07c", 235, 108],
+        ["#282828", "#689d6a", 235, 72],
+        ["#282828", "#8f3f71", 235, 132],
+  ]
 
 # FZF
 [[layers]]
   name = "fzf"
+
+# VimDevIcons
+[[custom_plugins]]
+  repo = "ryanoasis/vim-devicons"
+  name = "vim-devicons"
+  merged = false
+
+# Disable Checker
+[[layers]]
+  name = "checkers"
+  show_cursor_error = false
 
 # Enable autocomplete layer
 [[layers]]
@@ -65,6 +92,11 @@
   merged = false
 
 [[custom_plugins]]
+  repo = "mhartington/oceanic-next"
+  name = "oceanic"
+  merged = 0
+
+[[custom_plugins]]
   repo = "liuchengxu/vista.vim"
   name = "vista.vim"
   merged = false
@@ -74,15 +106,15 @@
   name = "fern.vim"
   merged = false
 
-# Python
-[[layers]]
-  name = "lang#python"
-  python_file_head = [
-    '#!/usr/bin/env python',
-    '# -*- coding: utf-8 -*-',
-    '',
-    ''
-  ]
+# # Python
+# [[layers]]
+#   name = "lang#python"
+#   python_file_head = [
+#     '#!/usr/bin/env python',
+#     '# -*- coding: utf-8 -*-',
+#     '',
+#     ''
+#   ]
 
 # Jupyter Noteboks
 [[layers]]
