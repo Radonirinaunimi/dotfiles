@@ -1,0 +1,16 @@
+n3pdf-git       https://github.com/N3PDF                             desc: n3pdf git repository
+nnpdf-git       https://github.com/NNPDF                             desc: nnpdf git repository
+ganpdfs         https://github.com/N3PDF/ganpdfs                     desc: ganpdfs git repository
+pycompressor    https://github.com/N3PDF/pycompressor                desc: pycompressor git repository
+pycomp-checks   https://github.com/N3PDF/pycompressor/issues/29      desc: quantitative comparison of standard and enhanced
+arxiv-hep-new   https://arxiv.org/list/hep-ph/new                    desc: arxiv hep ph updates
+inspire         https://inspirehep.net/                              desc: inspirehep website
+inspire-job     https://inspirehep.net/jobs?sort=deadline&size=25&page=1&field_of_interest=hep-ph&rank=POSTDOC          desc: inspire hep-ph postdoc jobs
+nnpdf-wiki      https://www.wiki.ed.ac.uk/pages/viewpage.action?spaceKey=nnpdfwiki&title=The+NNPDF+Collaboration+wiki   desc: nnpdf wiki
+vp-reports      https://vp.nnpdf.science/                            desc: validphys reports
+jupyter-books   https://executablebooks.org/en/latest/gallery.html   desc: jupyter book galleries
+phys-math-man   https://www.theoretical-physics.com/dev/index.html   desc: maths and physics manual
+cern-open-data  https://www.hepdata.net/                             desc: CERN open data
+PDG             https://pdg.lbl.gov/                                 desc: Particle Data Group
+spacevim-doc    https://spacevim.org/documentation/                  desc: SpaceVim documenation
+unix-rice       https://www.reddit.com/r/unixporn/                   desc: Unix rice from reddit
