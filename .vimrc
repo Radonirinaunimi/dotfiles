@@ -25,63 +25,43 @@ call plug#begin(expand('~/.vim/plugged'))
 "*****************************************************************************
 "" Plug install packages
 "*****************************************************************************
+
 Plug 'w0rp/ale'
+Plug 'govim/govim'
+Plug 'lervag/vimtex'
+Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
+Plug 'morhetz/gruvbox'
+Plug 'nvie/vim-flake8'
+Plug 'SirVer/ultisnips'
 Plug 'majutsushi/tagbar'
+Plug 'junegunn/goyo.vim'
+Plug 'tpope/vim-rhubarb'
+Plug 'xolox/vim-session'
+Plug 'honza/vim-snippets'
 Plug 'tpope/vim-fugitive'
-Plug 'Yggdroot/indentLine'
+Plug 'mhinz/vim-startify'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-rooter'
 Plug 'tpope/vim-commentary'
 Plug 'vim-scripts/grep.vim'
+Plug 'sotte/presenting.vim'
 Plug 'vim-scripts/CSApprox'
 Plug 'Raimondi/delimitMate'
 Plug 'airblade/vim-gitgutter'
+Plug 'ryanoasis/vim-devicons'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdcommenter'
+Plug 'dhruvasagar/vim-table-mode'
 Plug 'avelino/vim-bootstrap-updater'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-"" Vim-Session
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-session'
-
-"" Python Linter
-Plug 'nvie/vim-flake8'
-
-"" Snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-
-"" Plug 'sheerun/vim-polyglot'
-" Required by vim fugitive to :Gbrowse
-Plug 'tpope/vim-rhubarb'
-
-"" Vim presentation
-Plug 'sotte/presenting.vim'
-
-"" Vim ColorScheme
-"Plug 'tomasr/molokai'
-Plug 'morhetz/gruvbox'
-Plug 'dracula/vim', { 'as': 'dracula' }
-
-"" Live LateX Preview
-Plug 'lervag/vimtex'
 Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
-Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
-let g:livepreview_previewer = 'zathura'
-let g:livepreview_cursorhold_recompile = 0
-autocmd BufRead *.tex :Goyo 120
-
-"" Distraction free view
-Plug 'junegunn/goyo.vim'
-
-"" pydocstring
-" Initialized with Numpy format
-Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
-let g:pydocstring_formatter = 'numpy'
+Plug 'xuhdev/vim-latex-live-preview', {'for': 'tex'}
+Plug 'heavenshell/vim-pydocstring', {'do': 'make install'}
+Plug 'iamcco/markdown-preview.nvim', {'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 "" FZF search
 if isdirectory('/usr/local/opt/fzf')
@@ -96,10 +76,6 @@ if exists('make')
 endif
 Plug 'Shougo/vimproc.vim', {'do': g:make}
 
-"" Live Markdown Preview
-" see: https://github.com/iamcco/markdown-preview.nvim/
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-
 "*****************************************************************************
 "" Custom bundles
 "*****************************************************************************
@@ -108,35 +84,24 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
 Plug 'ludwig/split-manpage.vim'
 
-
 " go
-"" Go Lang Bundle
 Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
 
-
 " html
-"" HTML Bundle
 Plug 'hail2u/vim-css3-syntax'
 Plug 'gorodinskiy/vim-coloresque'
 Plug 'tpope/vim-haml'
 Plug 'mattn/emmet-vim'
 
-
 " javascript
-"" Javascript Bundle
 Plug 'jelera/vim-javascript-syntax'
 
-
 " php
-"" PHP Bundle
 Plug 'arnaud-lb/vim-php-namespace'
 
-
 " python
-"" Python Bundle
 Plug 'davidhalter/jedi-vim'
 Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
-
 
 " ruby
 Plug 'tpope/vim-rails'
@@ -144,7 +109,6 @@ Plug 'tpope/vim-rake'
 Plug 'tpope/vim-projectionist'
 Plug 'thoughtbot/vim-rspec'
 Plug 'ecomba/vim-ruby-refactoring'
-
 
 " typescript
 Plug 'leafgarland/typescript-vim'
@@ -217,11 +181,8 @@ set ruler
 set number
 
 let no_buffers_menu=1
-"silent! colorscheme molokai
-"silent! colorscheme gruvbox
 set bg=dark
-silent! colorscheme dracula
-let g:dracula_colorterm=0
+silent! colorscheme default
 
 set mouse=a
 set mousemodel=popup
@@ -244,7 +205,7 @@ else
   let g:indentLine_char = '┆'
   let g:indentLine_faster = 1
 
-  
+
   if $COLORTERM == 'gnome-terminal'
     set term=gnome-256color
   else
@@ -252,7 +213,7 @@ else
       set term=xterm-256color
     endif
   endif
-  
+
 endif
 
 
@@ -577,14 +538,10 @@ augroup go
 augroup END
 
 " ale
-:call extend(g:ale_linters, {
-    \"go": ['golint', 'go vet'], })
-
+:call extend(g:ale_linters, {"go": ['golint', 'go vet'], })
 
 " html
-" for html files, 2 spaces
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
-
 
 " javascript
 let g:javascript_enable_domhtmlcss = 1
@@ -595,12 +552,7 @@ augroup vimrc-javascript
   autocmd FileType javascript setl tabstop=4|setl shiftwidth=4|setl expandtab softtabstop=4
 augroup END
 
-
-" php
-
-
 " python
-" vim-python
 augroup vimrc-python
   autocmd!
   autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8
@@ -610,18 +562,17 @@ augroup END
 
 " jedi-vim
 let g:jedi#popup_on_dot = 0
-let g:jedi#goto_assignments_command = "<leader>g"
-let g:jedi#goto_definitions_command = "<leader>d"
+let g:jedi#smart_auto_mappings = 0
+let g:jedi#show_call_signatures = "0"
 let g:jedi#documentation_command = "K"
 let g:jedi#usages_command = "<leader>n"
 let g:jedi#rename_command = "<leader>r"
-let g:jedi#show_call_signatures = "0"
 let g:jedi#completions_command = "<C-Space>"
-let g:jedi#smart_auto_mappings = 0
+let g:jedi#goto_assignments_command = "<leader>g"
+let g:jedi#goto_definitions_command = "<leader>d"
 
 " ale
-:call extend(g:ale_linters, {
-    \'python': ['flake8'], })
+:call extend(g:ale_linters, {'python': ['flake8'], })
 
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1
@@ -633,9 +584,9 @@ let python_highlight_all = 1
 
 
 " ruby
+let g:rubycomplete_rails = 1
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
-let g:rubycomplete_rails = 1
 
 augroup vimrc-ruby
   autocmd!
@@ -655,10 +606,10 @@ let g:tagbar_type_ruby = {
 \ }
 
 " RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>t :call RunCurrentSpecFile()<CR>
 
 " For ruby refactory
 if has('nvim')
@@ -668,15 +619,15 @@ else
 endif
 
 " Ruby refactory
-nnoremap <leader>rap  :RAddParameter<cr>
-nnoremap <leader>rcpc :RConvertPostConditional<cr>
+nnoremap <leader>rit  :RInlineTemp<cr>
 nnoremap <leader>rel  :RExtractLet<cr>
+nnoremap <leader>rap  :RAddParameter<cr>
+vnoremap <leader>rem  :RExtractMethod<cr>
 vnoremap <leader>rec  :RExtractConstant<cr>
 vnoremap <leader>relv :RExtractLocalVariable<cr>
-nnoremap <leader>rit  :RInlineTemp<cr>
 vnoremap <leader>rrlv :RRenameLocalVariable<cr>
 vnoremap <leader>rriv :RRenameInstanceVariable<cr>
-vnoremap <leader>rem  :RExtractMethod<cr>
+nnoremap <leader>rcpc :RConvertPostConditional<cr>
 
 
 " typescript
@@ -704,9 +655,9 @@ endif
 if !exists('g:airline_powerline_fonts')
   let g:airline#extensions#tabline#left_sep = ' '
   let g:airline#extensions#tabline#left_alt_sep = '|'
-  let g:airline_left_sep          = '▶'
+  " let g:airline_left_sep          = '▶'
   let g:airline_left_alt_sep      = '»'
-  let g:airline_right_sep         = '◀'
+  " let g:airline_right_sep         = '◀'
   let g:airline_right_alt_sep     = '«'
   let g:airline#extensions#branch#prefix     = '⤴' "➔, ➥, ⎇
   let g:airline#extensions#readonly#symbol   = '⊘'
@@ -719,7 +670,7 @@ if !exists('g:airline_powerline_fonts')
   let g:airline_symbols.paste     = '∥'
   let g:airline_symbols.whitespace = 'Ξ'
 else
-  let g:airline#extensions#tabline#left_sep = ''
+  " let g:airline#extensions#tabline#left_sep = ''
   let g:airline#extensions#tabline#left_alt_sep = ''
 
   " powerline symbols
@@ -733,7 +684,25 @@ else
 endif
 
 
-"" "" Launch NERDTree
-"" autocmd VimEnter * NERDTree
-"" autocmd StdinReadPre * let s:std_in=1
-"" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"" Launch NERDTree
+" autocmd VimEnter * NERDTree
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+"" Custom Configurations
+set fillchars=""
+set signcolumn=no
+autocmd BufRead *.tex :Goyo 120
+let g:flake8_max_line_length=90
+let g:pydocstring_formatter = 'numpy'
+let g:livepreview_previewer = 'zathura'
+let g:livepreview_cursorhold_recompile = 0
+
+"" Enable persitent undo
+if has('persistent_undo')
+  if !isdirectory("/home/tanjona/.vim/undo")
+    call mkdir("/home/tanjona/.vim/undo", "", 0700)
+  endif
+  set undodir=/home/tanjona/.vim/undo
+  set undofile
+endif
