@@ -30,7 +30,7 @@ font:
     family: Hack Nerd Font
     style: Bold Italic
   # Size:
-  size: 8
+  size: 7
 
 # background_opacity: 1
 # background_blur: true
@@ -68,7 +68,7 @@ schemes:
   #####################
   purple_dracula: &dracula
     primary:
-      background: '#282a36'
+      background: '#232731'
       foreground: '#f8f8f2'
     cursor:
       text:   '#44475a'

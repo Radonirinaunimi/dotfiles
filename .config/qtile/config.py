@@ -127,20 +127,25 @@ keys = [
              ),
          # ROFI scripts launched with ALT + CTRL + KEY
          Key(["mod1", "control"], "b",
-             lazy.spawn("./my_scripts/bookrofi.sh"),
+             lazy.spawn("./myscripts/bookrofi.sh"),
              desc='Rofi scripts for launching bookmarks on firefox'
              ),
          Key(["mod1", "control"], "w",
-             lazy.spawn("./my_scripts/webrofi.sh"),
+             lazy.spawn("./myscripts/webrofi.sh"),
              desc='Rofi scripts for launching websearches on firefox'
              ),
          # FZF scripts
          Key(["mod1", "control"], "i",
-             lazy.spawn(myTerm+" -e sh ./my_scripts/imagefzf.sh"),
+             lazy.spawn(myTerm+" -e sh ./myscripts/imagefzf.sh"),
              desc='FZF scripts for opening images'
              ),
+         # FZF scripts
+         Key(["mod1", "control"], "p",
+             lazy.spawn(myTerm+" -e sh ./myscripts/pdffzf.sh"),
+             desc='FZF scripts for opening pdf files'
+             ),
          Key(["mod1", "control"], "v",
-             lazy.spawn(myTerm+" -e sh ./my_scripts/cdfzf.sh"),
+             lazy.spawn(myTerm+" -e sh ./myscripts/cdfzf.sh"),
              desc='FZF scripts for opening files in vim'
              ),
          # Volume
@@ -237,7 +242,7 @@ layouts = [
     layout.Floating(**layout_theme)
 ]
 
-colors = ["#292d3e", # current panel background
+colors = ["#232731", # current panel background
           "#282828", # background for current screen tab
           "#ffffff", # font color for group names
           "#fb4934", # border line color for current tab
@@ -268,9 +273,9 @@ def init_widgets_list():
                        background = colors[7]
                        ),
               widget.TextBox(
-                       text = " ",
+                       text = " ",
                        font = "Hack Nerd Font",
-                       fontsize = 18,
+                       fontsize = 16,
                        padding = 0,
                        foreground = colors[9],
                        background = colors[7],
@@ -340,12 +345,6 @@ def init_widgets_list():
                        foreground = colors[2],
                        background = colors[7],
                        fontsize = 14
-                       ),
-              widget.Pacman(
-                       update_interval = 1800,
-                       foreground = colors[2],
-                       mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn(myTerm + ' -e sudo pacman -Syu')},
-                       background = colors[7]
                        ),
               widget.TextBox(
                        text = "Updates",
